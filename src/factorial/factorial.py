@@ -20,13 +20,31 @@ def factorial(num):
             num -= 1
         return fact 
 
+# Función para manejar el rango "desde-hasta"
+def procesar_rango(rango):
+    try:
+        inicio, fin = map(int, rango.split('-'))
+        if inicio > fin:
+            print("El valor 'desde' no puede ser mayor que 'hasta'.")
+            sys.exit()
+        return inicio, fin
+    except ValueError:
+        print("Formato de rango incorrecto. Debe ser 'desde-hasta' (por ejemplo, 4-8).")
+        sys.exit()
+
 # Verificar si se ha pasado el argumento como número
 if len(sys.argv) == 1:  # Si no se ha pasado ningún argumento
-    # Solicitar el número al usuario
-    num = int(input("Por favor ingrese un número: "))
+    # Solicitar el rango al usuario
+    rango = input("Por favor ingrese un rango de números (desde-hasta): ")
+    inicio, fin = procesar_rango(rango)
 else:
-    num = int(sys.argv[1])  # Si el número fue pasado como argumento
+    # Si el argumento fue pasado como 'desde-hasta'
+    rango = sys.argv[1]
+    inicio, fin = procesar_rango(rango)
 
-print(f"Factorial de {num}! es {factorial(num)}")
+# Calcular y mostrar los factoriales para el rango
+for num in range(inicio, fin + 1):
+    print(f"Factorial de {num}! es {factorial(num)}")
+
 
 
