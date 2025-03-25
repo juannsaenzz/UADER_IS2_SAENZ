@@ -32,5 +32,5 @@ d. Sincronícelo con el repositorio en GitHub.
 ### Página web UADER:
 https://fcytcdelu.uader.edu.ar/
 
-![Logo de UADER]([https://via.placeholder.com/600x300.png?text=Logo+UADER](https://estudiantesfcyt.com.ar/wp-content/uploads/2021/11/U-QueEstudiar-300.png))
+![Logo de UADER](https://estudiantesfcyt.com.ar/wp-content/uploads/2021/11/U-QueEstudiar-300.png)
 
